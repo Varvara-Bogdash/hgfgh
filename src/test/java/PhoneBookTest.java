@@ -23,4 +23,13 @@ public class PhoneBookTest {
         assertEquals("123", pb.findByName("Alice"));
         assertNull(pb.findByName("Bob"));
     }
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook pb = new PhoneBook();
+        assertArrayEquals(new String[]{}, pb.printAllNames());
+
+        pb.add("Bob", "456");
+        pb.add("Alice", "123");
+        assertArrayEquals(new String[]{"Alice", "Bob"}, pb.printAllNames());
+    }
 }
