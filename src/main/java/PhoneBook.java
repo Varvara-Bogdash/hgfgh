@@ -23,6 +23,6 @@ public class PhoneBook {
         return nameToNumber.get(name);
     }
     public String[] printAllNames() {
-        return new String[0];
+        return sortedNames.toArray(new String[0]);
     }
 }
